@@ -4,10 +4,7 @@ import MainWidth from "../layout/MainWidth";
 
 const Home = () => {
   return (
-    <MainWidth>
-      <TopHeader />
       <div>home</div>
-    </MainWidth>
   );
 };
 
