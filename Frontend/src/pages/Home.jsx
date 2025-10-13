@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import TopHeader from "../layout/TopHeader";
+import MainWidth from "../layout/MainWidth";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <MainWidth>
+      <TopHeader />
+      <div>home</div>
+    </MainWidth>
+  );
+};
 
-export default Home
+export default Home;
