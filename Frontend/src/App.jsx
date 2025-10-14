@@ -7,6 +7,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from "./layout/RootLayout";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/account/Login";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "*", element: <NotFound /> },
+      { path: "login", element: <Login /> },
     ],
   },
 ]);
