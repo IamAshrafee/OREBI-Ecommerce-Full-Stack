@@ -6,13 +6,14 @@ import CustomBreadcrumb from "../../components/CustomBreadcrumb";
 import Inputs from "../../components/Inputs";
 import SecondaryButton from "../../components/SecondaryButton";
 import Button from "../../components/Button";
+import { Link } from "react-router";
 
 const Login = () => {
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Login" }];
   return (
     <div className="grow mt-14 mb-28">
       <MainWidth>
-        <div >
+        <div>
           <div className="mb-[80px]">
             <Heading1 text="Login" className="mb-2" />
             <CustomBreadcrumb items={breadcrumbItems} />
@@ -22,7 +23,8 @@ const Login = () => {
             <div className=" border-b border-[#F0F0F0]">
               <p className="font-dmsans text-gray-v1 mb-[60px] w-[644px]">
                 Hello, welcome to OREBI store, if you have an account with us,
-                please log in. Or create an account to start shopping with us. This is the chance to get the best service and experience.
+                please log in. Or create an account to start shopping with us.
+                This is the chance to get the best service and experience.
               </p>
             </div>
             <div className="border-b border-[#F0F0F0]">
@@ -53,10 +55,12 @@ const Login = () => {
                 date on your order status, and keep track of the orders you have
                 previously made.
               </p>
-              <Button
-                text="Create an Account"
-                className="mt-7 px-20 py-4 mb-[70px]"
-              />
+              <Link to="/signup">
+                <Button
+                  text="Create an Account"
+                  className="mt-7 px-20 py-4 mb-[70px]"
+                />
+              </Link>
             </div>
           </div>
         </div>

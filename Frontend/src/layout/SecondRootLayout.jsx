@@ -5,12 +5,11 @@ import Footer from "./Footer";
 import SecondHeader from "./SecondHeader";
 import ScrolltoTop from "../components/function/ScrolltoTop";
 
-const RootLayout = () => {
+const SecondRootLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <ScrolltoTop />
       <TopHeader />
-      <SecondHeader />
       <main className="grow flex flex-col">
         <Outlet />
       </main>
@@ -19,4 +18,4 @@ const RootLayout = () => {
   );
 };
 
-export default RootLayout;
+export default SecondRootLayout;
