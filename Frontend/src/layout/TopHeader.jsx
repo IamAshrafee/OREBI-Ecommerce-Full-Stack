@@ -9,8 +9,8 @@ const TopHeader = () => {
   const inactiveStyle =
     "font-dmsans text-gray-v1 hover:text-primary cursor-pointer";
   return (
-    <div className="relative w-full h-20">
-      <div className="fixed top-0 z-50 w-full bg-white ">
+    <div className="relative w-full h-20 ">
+      <div className="fixed top-0 z-50 w-full bg-white border-b border-b-gray-100">
         <MainWidth>
           <div className="flex flex-row justify-between items-center h-20">
             {/* Logo */}
