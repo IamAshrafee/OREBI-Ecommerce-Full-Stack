@@ -1,11 +1,9 @@
 import React from "react";
 
-const Button = ({ text, className, px, py }) => {
+const Button = ({ text, className}) => {
   return (
     <button
-      className={`bg-primary font-dmsans font-bold text-sm text-white cursor-pointer py-${[
-        py,
-      ]} px-${[px]} ${className}`}
+      className={`bg-primary font-dmsans font-bold text-sm text-white cursor-pointer ${className}`}
     >
       {text}
     </button>

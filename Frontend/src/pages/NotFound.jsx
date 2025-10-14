@@ -6,12 +6,12 @@ const NotFound = () => {
   return (
     <div className="grow flex items-center justify-center">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="font-dmsans font-bold text-[60px]">404 - Not Found</h1>
-        <p className="font-dmsans font-normal text-[20px]">
+        <h1 className="font-dmsans font-bold text-[55px]">404 - Not Found</h1>
+        <p className="font-dmsans font-normal text-[18px]">
           The page you are looking for does not exist.
         </p>
         <Link to="/">
-          <Button text="Go to Home" className="mt-6" px="14" py="4" />
+          <Button text="Go to Home" className="mt-6 px-14 py-4"  />
         </Link>
       </div>
     </div>
