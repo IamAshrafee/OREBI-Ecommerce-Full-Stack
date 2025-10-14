@@ -10,15 +10,15 @@ import Button from "../../components/Button";
 const Login = () => {
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Login" }];
   return (
-    <div className="grow">
+    <div className="grow mt-14 mb-28">
       <MainWidth>
-        <div className="">
+        <div >
           <div className="mb-[80px]">
             <Heading1 text="Login" className="mb-2" />
             <CustomBreadcrumb items={breadcrumbItems} />
           </div>
 
-          <div className="flex flex-col gap-14">
+          <div className="flex flex-col gap-12">
             <div className=" border-b border-[#F0F0F0]">
               <p className="font-dmsans text-gray-v1 mb-[60px] w-[644px]">
                 Hello, welcome to OREBI store, if you have an account with us,
