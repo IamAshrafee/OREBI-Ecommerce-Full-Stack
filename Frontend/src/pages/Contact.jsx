@@ -8,6 +8,8 @@ import Inputs from "./../components/Inputs";
 import Heading2 from "../components/Headings/Heading2";
 import Textarea from "../components/Textarea";
 
+// Contact page - Using this page, user will contact with the author/admin. Filling up the contact form and sending that will be sent an email to the admin's/given email. 
+
 const Contact = () => {
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Contact" }];
   return (

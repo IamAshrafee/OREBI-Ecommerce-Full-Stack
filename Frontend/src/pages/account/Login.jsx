@@ -8,6 +8,8 @@ import SecondaryButton from "../../components/SecondaryButton";
 import Button from "../../components/Button";
 import { Link } from "react-router";
 
+// This is the login page of the E-commerce website. 
+
 const Login = () => {
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Login" }];
   return (
@@ -27,6 +29,7 @@ const Login = () => {
                 This is the chance to get the best service and experience.
               </p>
             </div>
+            {/* Input form */}
             <div className="border-b border-[#F0F0F0]">
               <Heading2 text="Returning Customer"></Heading2>
               <div className="flex flex-row gap-20 mt-10 mb-7">

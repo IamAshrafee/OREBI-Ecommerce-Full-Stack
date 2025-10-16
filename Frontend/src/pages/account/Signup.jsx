@@ -7,6 +7,8 @@ import MainWidth from "../../layout/MainWidth";
 import Checkbox from "../../components/Checkbox";
 import Button from "./../../components/Button";
 
+// This is the main signup page of this website 
+
 const Signup = () => {
   const breadcrumbItems = [
     { label: "Home", path: "/" },
@@ -20,6 +22,7 @@ const Signup = () => {
             <Heading1 text="Sign up" />
             <CustomBreadcrumb items={breadcrumbItems} />
           </div>
+          {/* Signup form  */}
           <form type="submit" className="flex flex-col gap-12">
             <div className="border-b border-[#F0F0F0]">
               <p className="font-dmsans text-gray-v1 mb-[60px] w-[644px]">
@@ -28,6 +31,7 @@ const Signup = () => {
                 temporibus, laboriosam!
               </p>
             </div>
+            {/* Personal Details Section  */}
             <div className="border-b border-[#F0F0F0] flex flex-col gap-10">
               <Heading2 text="Your Personal Details" />
               <div className="flex flex-col gap-4">
@@ -61,6 +65,7 @@ const Signup = () => {
                 </div>
               </div>
             </div>
+            {/* Address section  */}
             <div className="border-b border-[#F0F0F0] flex flex-col gap-10">
               <Heading2 text="Your Address" />
               <div className="flex flex-col gap-4">
@@ -108,6 +113,7 @@ const Signup = () => {
                 </div>
               </div>
             </div>
+            {/* Password section */}
             <div className="border-b border-[#F0F0F0] flex flex-col gap-10">
               <Heading2 text="Set a Password" />
               <div className="flex flex-col gap-4">
@@ -127,6 +133,7 @@ const Signup = () => {
                 </div>
               </div>
             </div>
+            {/* Submit section  */}
             <div className="flex flex-col gap-6">
               <Checkbox text="I have read and agree to the Privacy Policy" />
 

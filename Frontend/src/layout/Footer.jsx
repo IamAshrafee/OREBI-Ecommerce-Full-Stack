@@ -6,6 +6,8 @@ import Logo from "../assets/svg/Logo.svg";
 import MainWidth from "./MainWidth";
 import { Link } from "react-router";
 
+// Main footer of this website
+
 const Footer = () => {
   return (
     <div className="bg-[#f5f5f5]">

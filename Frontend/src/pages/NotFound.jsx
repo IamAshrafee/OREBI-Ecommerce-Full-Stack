@@ -2,6 +2,8 @@ import React from "react";
 import Button from "./../components/Button";
 import { Link } from "react-router";
 
+// This is the Not-Found page - If user hit an link which is not in out path directory will be navigate to this page 
+
 const NotFound = () => {
   return (
     <div className="grow flex items-center justify-center">
