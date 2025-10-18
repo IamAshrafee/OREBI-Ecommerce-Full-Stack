@@ -6,6 +6,7 @@ import { BsFilterLeft } from "react-icons/bs";
 import React, { useState } from "react";
 import MainWidth from "./MainWidth";
 import ProfileDropdown from "../features/ProfileDropdown";
+import { Link } from "react-router";
 
 const SecondHeader = () => {
   const [openProfile, setOpenProfile] = useState(false);
@@ -31,14 +32,19 @@ const SecondHeader = () => {
           <div className="flex flex-row items-center gap-4">
             <div>
               <div className="flex flex-row items-end relative">
-                <div onClick={() => setOpenProfile((prev) => !prev)} className="flex flex-row items-end">
+                <div
+                  onClick={() => setOpenProfile((prev) => !prev)}
+                  className="flex flex-row items-end"
+                >
                   <BsFillPersonFill size={22} className="cursor-pointer" />
                   <AiFillCaretDown className="cursor-pointer" />
                 </div>
                 {openProfile && <ProfileDropdown />}
               </div>
             </div>
-            <HiShoppingCart size={22} className="cursor-pointer" />
+            <Link to="/your-cart">
+              <HiShoppingCart size={22} className="cursor-pointer" />
+            </Link>
           </div>
         </div>
       </MainWidth>

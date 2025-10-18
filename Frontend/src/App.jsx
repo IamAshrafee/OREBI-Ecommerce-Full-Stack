@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/account/Login";
 import SecondRootLayout from "./layout/SecondRootLayout";
 import Signup from "./pages/account/Signup";
+import YourCart from "./pages/shop/YourCart";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "shop", element: <Shop /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "your-cart", element: <YourCart /> },
       { path: "*", element: <NotFound /> },
     ],
   },
