@@ -3,10 +3,12 @@ import { AiFillCaretDown } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { CgSearch } from "react-icons/cg";
 import { BsFilterLeft } from "react-icons/bs";
-import React from "react";
+import React, { useState } from "react";
 import MainWidth from "./MainWidth";
+import ProfileDropdown from "../features/ProfileDropdown";
 
 const SecondHeader = () => {
+  const [openProfile, setOpenProfile] = useState(false);
   return (
     <div className="bg-[#f5f5f3]">
       <MainWidth>
@@ -27,8 +29,14 @@ const SecondHeader = () => {
             </div>
           </div>
           <div className="flex flex-row items-center gap-4">
-            <div className="flex flex-row items-end cursor-pointer">
-              <BsFillPersonFill size={22} /> <AiFillCaretDown />
+            <div>
+              <div className="flex flex-row items-end relative">
+                <div onClick={() => setOpenProfile((prev) => !prev)} className="flex flex-row items-end">
+                  <BsFillPersonFill size={22} className="cursor-pointer" />
+                  <AiFillCaretDown className="cursor-pointer" />
+                </div>
+                {openProfile && <ProfileDropdown />}
+              </div>
             </div>
             <HiShoppingCart size={22} className="cursor-pointer" />
           </div>
