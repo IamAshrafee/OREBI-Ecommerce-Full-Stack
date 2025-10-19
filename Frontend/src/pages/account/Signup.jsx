@@ -40,13 +40,13 @@ const Signup = () => {
                     label="First Name"
                     type="text"
                     placeholder="John"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="Last Name"
                     type="text"
                     placeholder="Doe"
-                    className="w-96"
+                    className="md:w-96"
                   />
                 </div>
                 <div iv className="flex flex-row gap-8 mb-[70px]">
@@ -54,13 +54,13 @@ const Signup = () => {
                     label="Email Address"
                     type="email"
                     placeholder="John@gmail.com"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="Telephone"
                     type="number"
                     placeholder="+88017xxxxxxxx"
-                    className="w-96"
+                    className="md:w-96"
                   />
                 </div>
               </div>
@@ -74,13 +74,13 @@ const Signup = () => {
                     label="Address 1"
                     type="text"
                     placeholder="123 Main St"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="Address 2"
                     type="text"
                     placeholder="-"
-                    className="w-96"
+                    className="md:w-96"
                   />
                 </div>
                 <div iv className="flex flex-row gap-8">
@@ -88,13 +88,13 @@ const Signup = () => {
                     label="City"
                     type="text"
                     placeholder="Your City"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="Postal Code"
                     type="text"
                     placeholder="1216"
-                    className="w-96"
+                    className="md:w-96"
                   />
                 </div>
                 <div iv className="flex flex-row gap-8 mb-[70px]">
@@ -102,13 +102,13 @@ const Signup = () => {
                     label="Division"
                     type="text"
                     placeholder="Your Division"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="District"
                     type="text"
                     placeholder="Your District"
-                    className="w-96"
+                    className="md:w-96"
                   />
                 </div>
               </div>
@@ -122,13 +122,13 @@ const Signup = () => {
                     label="Password"
                     type="password"
                     placeholder="Set a New Password"
-                    className="w-96"
+                    className="md:w-96"
                   />
                   <Inputs
                     label="Repeat Password"
                     type="password"
                     placeholder="Repeat Password"
-                    className="w-96 "
+                    className="md:w-96 "
                   />
                 </div>
               </div>

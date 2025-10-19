@@ -36,13 +36,13 @@ const Login = () => {
                 <Inputs
                   type="email"
                   placeholder="example@gmail.com"
-                  className="w-96"
+                  className="md:w-96"
                   label="Email Address"
                 />
                 <Inputs
                   type="password"
                   placeholder=""
-                  className="w-96"
+                  className="md:w-96"
                   label="Password"
                 />
               </div>
