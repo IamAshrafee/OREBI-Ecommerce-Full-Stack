@@ -8,7 +8,7 @@ import Inputs from "./../components/Inputs";
 import Heading2 from "../components/Headings/Heading2";
 import Textarea from "../components/Textarea";
 
-// Contact page - Using this page, user will contact with the author/admin. Filling up the contact form and sending that will be sent an email to the admin's/given email. 
+// Contact page - Using this page, user will contact with the author/admin. Filling up the contact form and sending that will be sent an email to the admin's/given email.
 
 const Contact = () => {
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Contact" }];
@@ -28,18 +28,18 @@ const Contact = () => {
                   label="Name"
                   type="text"
                   placeholder="Enter your name"
-                  className="w-[500px]"
+                  className="md:w-[500px]"
                 />
                 <Inputs
                   label="Email"
                   type="email"
                   placeholder="Enter your email"
-                  className="w-[500px]"
+                  className="md:w-[500px]"
                 />
                 <Textarea
                   label="Message"
                   placeholder="Enter your message"
-                  className="w-[500px]"
+                  className="md:w-[500px]"
                 />
               </div>
               <Button text="Post" className="px-9 py-3 w-max" />
