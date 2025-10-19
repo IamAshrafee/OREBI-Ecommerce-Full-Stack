@@ -11,6 +11,7 @@ import Login from "./pages/account/Login";
 import SecondRootLayout from "./layout/SecondRootLayout";
 import Signup from "./pages/account/Signup";
 import YourCart from "./pages/shop/YourCart";
+import Checkout from "./pages/shop/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "your-cart", element: <YourCart /> },
+      { path: "checkout", element: <Checkout /> },
       { path: "*", element: <NotFound /> },
     ],
   },
