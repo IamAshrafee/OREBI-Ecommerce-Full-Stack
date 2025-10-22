@@ -1,5 +1,3 @@
-'use client'
-
 import * as Headless from '@headlessui/react'
 import clsx from 'clsx'
 import { LayoutGroup, motion } from 'motion/react'
@@ -106,7 +104,7 @@ export const SidebarItem = forwardRef(function SidebarItem(
           className="absolute inset-y-2 -left-4 w-0.5 rounded-full bg-zinc-950 dark:bg-white"
         />
       )}
-      {typeof props.href === 'string' ? (
+      {typeof props.to === 'string' ? (
         <Headless.CloseButton
           as={Link}
           {...props}

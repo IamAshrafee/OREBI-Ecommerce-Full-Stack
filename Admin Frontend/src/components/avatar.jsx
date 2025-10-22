@@ -46,7 +46,7 @@ export const AvatarButton = forwardRef(function AvatarButton(
     'relative inline-grid focus:not-data-focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-blue-500'
   )
 
-  return typeof props.href === 'string' ? (
+  return typeof props.to === 'string' ? (
     <Link {...props} className={classes} ref={ref}>
       <TouchTarget>
         <Avatar src={src} square={square} initials={initials} alt={alt} />

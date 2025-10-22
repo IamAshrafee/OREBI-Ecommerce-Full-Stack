@@ -57,7 +57,7 @@ export const BadgeButton = forwardRef(function BadgeButton(
     'group relative inline-flex rounded-md focus:not-data-focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-blue-500'
   )
 
-  return typeof props.href === 'string' ? (
+  return typeof props.to === 'string' ? (
     <Link {...props} className={classes} ref={ref}>
       <TouchTarget>
         <Badge color={color}>{children}</Badge>

@@ -34,25 +34,25 @@ export function TableBody(props) {
 }
 
 const TableRowContext = createContext({
-  href: undefined,
+  to: undefined,
   target: undefined,
   title: undefined,
 })
 
-export function TableRow({ href, target, title, className, ...props }) {
+export function TableRow({ to, target, title, className, ...props }) {
   let { striped } = useContext(TableContext)
 
   return (
-    <TableRowContext.Provider value={{ href, target, title }}>
+    <TableRowContext.Provider value={{ to, target, title }}>
       <tr
         {...props}
         className={clsx(
           className,
-          href &&
+          to &&
             'has-[[data-row-link][data-focus]]:outline-2 has-[[data-row-link][data-focus]]:-outline-offset-2 has-[[data-row-link][data-focus]]:outline-blue-500 dark:focus-within:bg-white/2.5',
           striped && 'even:bg-zinc-950/2.5 dark:even:bg-white/2.5',
-          href && striped && 'hover:bg-zinc-950/5 dark:hover:bg-white/5',
-          href && !striped && 'hover:bg-zinc-950/2.5 dark:hover:bg-white/2.5'
+          to && striped && 'hover:bg-zinc-950/5 dark:hover:bg-white/5',
+          to && !striped && 'hover:bg-zinc-950/2.5 dark:hover:bg-white/2.5'
         )}
       />
     </TableRowContext.Provider>
@@ -77,12 +77,12 @@ export function TableHeader({ className, ...props }) {
 
 export function TableCell({ className, children, ...props }) {
   let { bleed, dense, grid, striped } = useContext(TableContext)
-  let { href, target, title } = useContext(TableRowContext)
+  let { to, target, title } = useContext(TableRowContext)
   let [cellRef, setCellRef] = useState(null)
 
   return (
     <td
-      ref={href ? setCellRef : undefined}
+      ref={to ? setCellRef : undefined}
       {...props}
       className={clsx(
         className,
@@ -93,10 +93,10 @@ export function TableCell({ className, children, ...props }) {
         !bleed && 'sm:first:pl-1 sm:last:pr-1'
       )}
     >
-      {href && (
+      {to && (
         <Link
           data-row-link
-          href={href}
+          to={to}
           target={target}
           aria-label={title}
           tabIndex={cellRef?.previousElementSibling === null ? 0 : -1}

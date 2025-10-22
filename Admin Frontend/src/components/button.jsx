@@ -165,7 +165,7 @@ export const Button = forwardRef(function Button({ color, outline, plain, classN
     outline ? styles.outline : plain ? styles.plain : clsx(styles.solid, styles.colors[color ?? 'dark/zinc'])
   )
 
-  return typeof props.href === 'string' ? (
+  return typeof props.to === 'string' ? (
     <Link {...props} className={classes} ref={ref}>
       <TouchTarget>{children}</TouchTarget>
     </Link>

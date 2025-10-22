@@ -1,5 +1,3 @@
-'use client'
-
 import * as Headless from '@headlessui/react'
 import clsx from 'clsx'
 import { LayoutGroup, motion } from 'motion/react'
@@ -61,7 +59,7 @@ export const NavbarItem = forwardRef(function NavbarItem(
           className="absolute inset-x-2 -bottom-2.5 h-0.5 rounded-full bg-zinc-950 dark:bg-white"
         />
       )}
-      {typeof props.href === 'string' ? (
+      {typeof props.to === 'string' ? (
         <Link {...props} className={classes} data-current={current ? 'true' : undefined} ref={ref}>
           <TouchTarget>{children}</TouchTarget>
         </Link>
