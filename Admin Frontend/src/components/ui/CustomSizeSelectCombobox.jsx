@@ -111,9 +111,6 @@ export default function CustomSizeSelectCombobox() {
             onKeyDown={handleInputKeyDown}
             onClick={handleInputClick}
             onFocus={() => setIsOpen(true)}
-            placeholder={
-              selectedSizes.length === 0 ? "Type to search sizes..." : ""
-            }
             displayValue={() => query}
           />
         </div>

@@ -2,6 +2,7 @@ import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import CustomColorSelectCombobox from "../../components/ui/CustomColorSelectCombobox";
 import CustomSizeSelectCombobox from "../../components/ui/CustomSizeSelectCombobox";
 import CustomImageUpload from "../../components/ui/CustomImageUpload";
+import CustomMultiImageUpload from "../../components/ui/CustomMultiImageUpload";
 
 export default function CreateProduct() {
   return (
@@ -121,6 +122,9 @@ export default function CreateProduct() {
           <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
             <div className="col-span-full">
               <CustomImageUpload label="Cover Photo" />
+            </div>
+            <div className="col-span-full">
+              <CustomMultiImageUpload label="More Photos" />
             </div>
           </div>
         </div>
@@ -300,9 +304,7 @@ export default function CreateProduct() {
         >
           Cancel
         </button>
-        <button
-          className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 dark:bg-gray-500 dark:shadow-none dark:focus-visible:outline-gray-500"
-        >
+        <button className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 dark:bg-gray-500 dark:shadow-none dark:focus-visible:outline-gray-500">
           Draft
         </button>
         <button
