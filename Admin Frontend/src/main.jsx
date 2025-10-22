@@ -9,7 +9,7 @@ import { Notifications } from "./pages/Notifications";
 import Products from "./pages/Product/Products.jsx";
 import Orders from "./pages/order/Orders.jsx";
 import CreateOrder from "./pages/order/CreateOrder.jsx";
-import { CreateProduct } from "./pages/Product/CreateProduct.jsx";
+import CreateProduct  from "./pages/Product/CreateProduct.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import MyProfile from "./pages/profile/MyProfile.jsx";
 import Logout from "./pages/profile/Logout.jsx";

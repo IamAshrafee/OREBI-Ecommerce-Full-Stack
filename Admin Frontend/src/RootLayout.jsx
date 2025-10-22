@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { Avatar } from "./components/avatar";
-import girlProfile from "./assets/jpg/portrait-of-woman-with-hand-on-her-face.jpg"
+import girlProfile from "./assets/jpg/portrait-of-woman-with-hand-on-her-face.jpg";
 import {
   Dropdown,
   DropdownButton,
@@ -62,15 +62,15 @@ export default function RootLayout() {
         <Navbar>
           <NavbarSpacer />
           <NavbarSection>
-            <NavbarItem to="/search" aria-label="Search">
-              <MagnifyingGlassIcon />
+            <NavbarItem to="/notifications" aria-label="Notifications">
+              <BellIcon />
             </NavbarItem>
-            <NavbarItem to="/inbox" aria-label="Inbox">
-              <InboxIcon />
+            <NavbarItem to="/" aria-label="Dashboard">
+              <WindowIcon />
             </NavbarItem>
             <Dropdown>
               <DropdownButton as={NavbarItem}>
-                <Avatar src="/profile-photo.jpg" square />
+                <Avatar src={girlProfile} square />
               </DropdownButton>
               <DropdownMenu className="min-w-64" anchor="top start">
                 <DropdownItem to="/my-profile">
@@ -131,12 +131,7 @@ export default function RootLayout() {
             <Dropdown>
               <DropdownButton as={SidebarItem}>
                 <span className="flex min-w-0 items-center gap-3">
-                  <Avatar
-                    src={girlProfile}
-                    className="size-10"
-                    square
-                    alt=""
-                  />
+                  <Avatar src={girlProfile} className="size-10" square alt="" />
                   <span className="min-w-0">
                     <span className="block truncate text-sm/5 font-medium text-zinc-950 dark:text-white">
                       Erica
@@ -165,7 +160,20 @@ export default function RootLayout() {
       }
     >
       {/* The page content */}
-      <Outlet />
+      <div className="pb-10">
+        <header className="mb-2 border-b border-gray-900/10 z-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white ">
+              Create New Product
+            </h1>
+          </div>
+        </header>
+        <main>
+          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+            <Outlet />
+          </div>
+        </main>
+      </div>
     </SidebarLayout>
   );
 }
