@@ -1,3 +1,9 @@
+## Live Links -
+
+*  User end -> [https://orebi-ecommerce-full-stack.vercel.app/](https://orebi-ecommerce-full-stack.vercel.app/)
+*  Admin end -> https://orebi-ecommerce-admin.vercel.app/
+*  
+
 # A Complete Full stack project of an E-commerce Business
 
 ## This project includes -
@@ -14,9 +20,7 @@
 
 *   This project will be complete using MERN Stack
 
-## Live Link -
 
-*   [https://orebi-ecommerce-full-stack.vercel.app/](https://orebi-ecommerce-full-stack.vercel.app/)
 
 ---
 
