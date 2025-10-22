@@ -9,11 +9,16 @@ import { Notifications } from "./pages/Notifications";
 import Products from "./pages/product/Products.jsx";
 import Orders from "./pages/order/Orders.jsx";
 import CreateOrder from "./pages/order/CreateOrder.jsx";
-import CreateProduct  from "./pages/product/CreateProduct.jsx";
+import CreateProduct from "./pages/product/CreateProduct.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import MyProfile from "./pages/profile/MyProfile.jsx";
 import Logout from "./pages/profile/Logout.jsx";
 import Login from "./pages/profile/Login.jsx";
+import ProductSettings from "./pages/product/ProductSettings.jsx";
+import Category from "./pages/product/product settings/Category.jsx";
+import Colors from "./pages/product/product settings/Colors";
+import Sizes from "./pages/product/product settings/Sizes";
+import FormModal from "./modals/FormModal.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,10 +30,24 @@ const router = createBrowserRouter([
         path: "/notifications",
         element: <Notifications />,
       },
+      {
+        path: "/modal",
+        element: <FormModal />,
+      },
       { path: "/products", element: <Products /> },
       {
         path: "/create-product",
         element: <CreateProduct />,
+      },
+      {
+        path: "/product-settings",
+        element: <ProductSettings />,
+        children: [
+          { index: true, element: <Category /> }, // Default tab
+          { path: "category", element: <Category /> },
+          { path: "color", element: <Colors /> },
+          { path: "size", element: <Sizes /> },
+        ],
       },
       { path: "/orders", element: <Orders /> },
       {

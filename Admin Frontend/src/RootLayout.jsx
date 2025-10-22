@@ -38,6 +38,7 @@ import {
   ShieldCheckIcon,
   UserIcon,
   ArchiveBoxIcon,
+  AdjustmentsHorizontalIcon,
 } from "@heroicons/react/16/solid";
 import {
   BanknotesIcon,
@@ -67,6 +68,10 @@ export default function RootLayout() {
     "/orders": "All Orders",
     "/create-order": "Create New Order",
     "/my-profile": "My Profile",
+    "/product-settings": "Category Setting",
+    "/product-settings/category" : "Category Setting",
+    "/product-settings/color" : "Color Setting",
+    "/product-settings/size" : "Size Setting",
   };
 
   // Get the current page title, with a default fallback
@@ -115,7 +120,10 @@ export default function RootLayout() {
                 <WindowIcon />
                 <SidebarLabel>Dashboard</SidebarLabel>
               </SidebarItem>
-              <SidebarItem to="/notifications" current={pathname === "/notifications"}>
+              <SidebarItem
+                to="/notifications"
+                current={pathname === "/notifications"}
+              >
                 <BellIcon />
                 <SidebarLabel>Notifications</SidebarLabel>
               </SidebarItem>
@@ -127,16 +135,29 @@ export default function RootLayout() {
                 <ArchiveBoxIcon />
                 <SidebarLabel>All Products</SidebarLabel>
               </SidebarItem>
-              <SidebarItem to="/create-product" current={pathname === "/create-product"}>
+              <SidebarItem
+                to="/create-product"
+                current={pathname === "/create-product"}
+              >
                 <PlusCircleIcon />
                 <SidebarLabel>Create Product</SidebarLabel>
+              </SidebarItem>
+              <SidebarItem
+                to="/product-settings"
+                current={pathname === "/product-settings"}
+              >
+                <AdjustmentsHorizontalIcon />
+                <SidebarLabel>Product Settings</SidebarLabel>
               </SidebarItem>
               <SidebarHeading>Order</SidebarHeading>
               <SidebarItem to="/orders" current={pathname === "/orders"}>
                 <BanknotesIcon />
                 <SidebarLabel>All Orders</SidebarLabel>
               </SidebarItem>
-              <SidebarItem to="/create-order" current={pathname === "/create-order"}>
+              <SidebarItem
+                to="/create-order"
+                current={pathname === "/create-order"}
+              >
                 <PlusCircleIcon />
                 <SidebarLabel>Create Order</SidebarLabel>
               </SidebarItem>
@@ -175,16 +196,16 @@ export default function RootLayout() {
       }
     >
       {/* The page content */}
-      <div className="pb-10">
+      <div className="pb-10 h-full flex flex-col ">
         <header className="mb-2 border-b border-gray-900/10 z-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2  sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white ">
               {currentPageTitle}
             </h1>
           </div>
         </header>
-        <main>
-          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <main className="h-full w-full grow">
+          <div className="mx-auto max-w-7xl px-2 py-8 sm:px-6 lg:px-8">
             <Outlet />
           </div>
         </main>
