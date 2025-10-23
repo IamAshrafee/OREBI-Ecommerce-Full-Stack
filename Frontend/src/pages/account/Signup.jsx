@@ -41,6 +41,7 @@ const Signup = () => {
                     type="text"
                     placeholder="John"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="Last Name"
@@ -55,6 +56,7 @@ const Signup = () => {
                     type="email"
                     placeholder="John@gmail.com"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="Telephone"
@@ -75,6 +77,7 @@ const Signup = () => {
                     type="text"
                     placeholder="123 Main St"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="Address 2"
@@ -89,6 +92,7 @@ const Signup = () => {
                     type="text"
                     placeholder="Your City"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="Postal Code"
@@ -103,12 +107,14 @@ const Signup = () => {
                     type="text"
                     placeholder="Your Division"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="District"
                     type="text"
                     placeholder="Your District"
                     className="md:w-96"
+                    required="required"
                   />
                 </div>
               </div>
@@ -123,12 +129,14 @@ const Signup = () => {
                     type="password"
                     placeholder="Set a New Password"
                     className="md:w-96"
+                    required="required"
                   />
                   <Inputs
                     label="Repeat Password"
                     type="password"
                     placeholder="Repeat Password"
                     className="md:w-96 "
+                    required="required"
                   />
                 </div>
               </div>
