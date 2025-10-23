@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   telephone: {
-    type: Number,
+    type: String,
   },
   //   Address section
   address1: {
