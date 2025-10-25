@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading1 from "../../components/Headings/Heading1";
 import CustomBreadcrumb from "../../components/CustomBreadcrumb";
 import Heading2 from "../../components/Headings/Heading2";
@@ -8,9 +8,11 @@ import Checkbox from "../../components/Checkbox";
 import Button from "./../../components/Button";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 // This is the main signup page of this website
 
 const Signup = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const breadcrumbItems = [{ label: "Home", path: "/" }, { label: "Sign up" }];
   const {
     register,
@@ -19,15 +21,22 @@ const Signup = () => {
     watch,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
     try {
-      axios.post(
+      const response = await axios.post(
         "http://localhost:3000/api/v1/authentication/registration",
         data
       );
+      toast.success(response.data.message);
     } catch (error) {
-      console.log(error);
+      if (error.response) {
+        toast.error(error.response.data.error);
+      } else {
+        toast.error("Something went wrong");
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -35,6 +44,9 @@ const Signup = () => {
     <div>
       <MainWidth>
         <div className="mt-14 mb-28">
+          <div>
+            <Toaster position="top-center" reverseOrder={false} />
+          </div>
           <div className="flex flex-col gap-2 mb-16">
             <Heading1 text="Sign up" />
             <CustomBreadcrumb items={breadcrumbItems} />
@@ -199,7 +211,12 @@ const Signup = () => {
                 </div>
               )}
 
-              <Button text="Create" type="submit" className="px-14 p-3 w-max" />
+              <Button
+                text={isSubmitting ? "Creating..." : "Create"}
+                type="submit"
+                className="px-14 p-3 w-max"
+                disabled={isSubmitting}
+              />
             </div>
           </form>
         </div>
