@@ -39,6 +39,7 @@ import {
   UserIcon,
   ArchiveBoxIcon,
   AdjustmentsHorizontalIcon,
+  UsersIcon,
 } from "@heroicons/react/16/solid";
 import {
   BanknotesIcon,
@@ -66,12 +67,13 @@ export default function RootLayout() {
     "/products": "All Products",
     "/create-product": "Create New Product",
     "/orders": "All Orders",
+    "/users": "All Users",
     "/create-order": "Create New Order",
     "/my-profile": "My Profile",
     "/product-settings": "Category Setting",
-    "/product-settings/category" : "Category Setting",
-    "/product-settings/color" : "Color Setting",
-    "/product-settings/size" : "Size Setting",
+    "/product-settings/category": "Category Setting",
+    "/product-settings/color": "Color Setting",
+    "/product-settings/size": "Size Setting",
   };
 
   // Get the current page title, with a default fallback
@@ -160,6 +162,11 @@ export default function RootLayout() {
               >
                 <PlusCircleIcon />
                 <SidebarLabel>Create Order</SidebarLabel>
+              </SidebarItem>
+              <SidebarHeading>Users</SidebarHeading>
+              <SidebarItem to="/users" current={pathname === "/users"}>
+                <UsersIcon />
+                <SidebarLabel>All Users</SidebarLabel>
               </SidebarItem>
             </SidebarSection>
           </SidebarBody>

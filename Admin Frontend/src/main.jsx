@@ -19,6 +19,7 @@ import Category from "./pages/product/product settings/Category.jsx";
 import Colors from "./pages/product/product settings/Colors";
 import Sizes from "./pages/product/product settings/Sizes";
 import FormModal from "./modals/FormModal.jsx";
+import Allusers from "./pages/users/Allusers.jsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
         ],
       },
       { path: "/orders", element: <Orders /> },
+      { path: "/users", element: <Allusers /> },
       {
         path: "/create-order",
         element: <CreateOrder />,
