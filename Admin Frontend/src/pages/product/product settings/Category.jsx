@@ -42,7 +42,7 @@ export default function Category() {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:3000/api/v1/products/category"
+          "http://localhost:3000/api/v1/products/categories"
         );
         console.log("Fetched data:", response.data);
         setCategories(response.data);
