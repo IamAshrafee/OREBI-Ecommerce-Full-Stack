@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Allusers() {
@@ -8,7 +9,9 @@ export default function Allusers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/v1/users/all");
+        const response = await axios.get(
+          "http://localhost:3000/api/v1/users/all"
+        );
         const data = await response.json();
         setUsers(data.users);
       } catch (error) {
