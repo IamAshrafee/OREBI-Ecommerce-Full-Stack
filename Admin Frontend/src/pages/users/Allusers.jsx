@@ -12,8 +12,8 @@ export default function Allusers() {
         const response = await axios.get(
           "http://localhost:3000/api/v1/users/all"
         );
-        const data = await response.json();
-        setUsers(data.users);
+        // const data = await response.json();
+        setUsers(response.data.users);
       } catch (error) {
         setError(error);
       } finally {
